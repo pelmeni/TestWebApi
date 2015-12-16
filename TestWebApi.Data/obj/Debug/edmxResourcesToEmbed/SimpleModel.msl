@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="testEntities">
+    <EntitySetMapping Name="autoes">
+      <EntityTypeMapping TypeName="testModel.auto">
+        <MappingFragment StoreEntitySet="auto">
+          <ScalarProperty Name="auto_id" ColumnName="auto_id" />
+          <ScalarProperty Name="mark" ColumnName="mark" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="no" ColumnName="no" />
+          <ScalarProperty Name="color" ColumnName="color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="drivers">
+      <EntityTypeMapping TypeName="testModel.driver">
+        <MappingFragment StoreEntitySet="driver">
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="passport_no_full" ColumnName="passport_no_full" />
+          <ScalarProperty Name="born_date" ColumnName="born_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="driver_auto">
+      <EntityTypeMapping TypeName="testModel.driver_auto">
+        <MappingFragment StoreEntitySet="driver_auto">
+          <ScalarProperty Name="driver_auto_id" ColumnName="driver_auto_id" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="auto_id" ColumnName="auto_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedbacks">
+      <EntityTypeMapping TypeName="testModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="points" ColumnName="points" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

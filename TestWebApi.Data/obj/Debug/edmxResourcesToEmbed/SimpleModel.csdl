@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="testEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="autoes" EntityType="testModel.auto" />
+    <EntitySet Name="drivers" EntityType="testModel.driver" />
+    <EntitySet Name="driver_auto" EntityType="testModel.driver_auto" />
+    <EntitySet Name="feedbacks" EntityType="testModel.feedback" />
+  </EntityContainer>
+  <EntityType Name="auto">
+    <Key>
+      <PropertyRef Name="auto_id" />
+    </Key>
+    <Property Name="auto_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="mark" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="model" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="no" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="color" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="driver">
+    <Key>
+      <PropertyRef Name="driver_id" />
+    </Key>
+    <Property Name="driver_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="first_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="passport_no_full" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="born_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="driver_auto">
+    <Key>
+      <PropertyRef Name="driver_auto_id" />
+    </Key>
+    <Property Name="driver_auto_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="driver_id" Type="Int32" Nullable="false" />
+    <Property Name="auto_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="driver_id" Type="Int32" Nullable="false" />
+    <Property Name="points" Type="Int32" />
+    <Property Name="created" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

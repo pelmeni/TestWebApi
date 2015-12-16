@@ -1,0 +1,10 @@
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\TestWebApi.Business.dll
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\TestWebApi.Business.pdb
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\TestWebApi.Data.dll
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\EntityFramework.dll
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\TestWebApi.Data.pdb
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\EntityFramework.xml
+C:\dev\TestWebApi\TestWebApi.Business\obj\Debug\TestWebApi.Business.csprojResolveAssemblyReference.cache
+C:\dev\TestWebApi\TestWebApi.Business\obj\Debug\TestWebApi.Business.dll
+C:\dev\TestWebApi\TestWebApi.Business\obj\Debug\TestWebApi.Business.pdb
+C:\dev\TestWebApi\TestWebApi.Business\bin\Debug\TestWebApi.Business.dll.config

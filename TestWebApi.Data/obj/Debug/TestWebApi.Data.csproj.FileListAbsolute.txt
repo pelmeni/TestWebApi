@@ -1,0 +1,8 @@
+C:\dev\TestWebApi\TestWebApi.Data\bin\Debug\TestWebApi.Data.dll.config
+C:\dev\TestWebApi\TestWebApi.Data\bin\Debug\TestWebApi.Data.dll
+C:\dev\TestWebApi\TestWebApi.Data\bin\Debug\TestWebApi.Data.pdb
+C:\dev\TestWebApi\TestWebApi.Data\bin\Debug\EntityFramework.dll
+C:\dev\TestWebApi\TestWebApi.Data\bin\Debug\EntityFramework.xml
+C:\dev\TestWebApi\TestWebApi.Data\obj\Debug\TestWebApi.Data.csprojResolveAssemblyReference.cache
+C:\dev\TestWebApi\TestWebApi.Data\obj\Debug\TestWebApi.Data.dll
+C:\dev\TestWebApi\TestWebApi.Data\obj\Debug\TestWebApi.Data.pdb
