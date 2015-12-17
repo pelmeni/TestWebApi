@@ -12,12 +12,6 @@ namespace TestWebApi.Controllers
 {
     public class DriverAutosController : ApiController
     {
-//        // GET api/driverautos
-//        public IEnumerable<string> Get()
-//        {
-//            return new string[] { "value1", "value2" };
-//        }
-
         // GET api/driverautos/5
         public JsonResult<IEnumerable<auto>> Get(int id)
         {
@@ -30,13 +24,7 @@ namespace TestWebApi.Controllers
             DriverAutoOperations.AddAutoToDriver(id, int.Parse(value));   
         }
 
-//        // PUT api/driverautos/5
-//        public void Put(int id, [FromBody]string value)
-//        {
-//        }
-
         // DELETE api/driverautos/5
-        
         public void Delete(int id, [FromBody]string value)
         {
             DriverAutoOperations.RemoveAutoDriver(int.Parse(value),id);

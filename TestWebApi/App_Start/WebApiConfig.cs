@@ -21,6 +21,12 @@ namespace TestWebApi
                 defaults: new { id = RouteParameter.Optional }
                 
                 );
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApiWithIdAndAction",
+                routeTemplate: "api/{controller}/{id}/{action}"
+                );
+
 //
 //            config.Routes.MapHttpRoute(
 //                name: "DefaultApiWithActionId",

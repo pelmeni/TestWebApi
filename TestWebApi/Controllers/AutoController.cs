@@ -18,24 +18,13 @@ namespace TestWebApi.Controllers
         // GET api/auto
         public JsonResult<IEnumerable<auto>> Get()
         {
-            return Json(AutoOperations.GetList(),
-                new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                });
-
+            return Json(AutoOperations.GetList());
         }
-        /*
-         
-         */
+        
         // GET api/auto/5
         public JsonResult<auto> Get(int id)
         {
-            return Json(AutoOperations.Get(id),
-                new JsonSerializerSettings()
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                });
+            return Json(AutoOperations.Get(id));
         }
         /*
             var r = new XMLHttpRequest(); 
@@ -87,5 +76,31 @@ namespace TestWebApi.Controllers
         {
             AutoOperations.Delete(id);
         }
+
+                #region not pure rest, but much more usefull
+
+        // GET api/auto/5/drivers
+        [Route("api/{controller}/{id}/drivers")]
+        public JsonResult<IEnumerable<driver>> GetDrivers(int id)
+        {
+            return Json(DriverAutoOperations.GetAutoDrivers(id));
+        }
+
+
+        // POST api/auto/5/driver
+        [Route("api/{controller}/{id}/driver")]
+        public void PostAddDriver(int id, [FromBody]string value)
+        {
+            DriverAutoOperations.AddAutoToDriver(id, int.Parse(value));
+        }
+
+        // DELETE api/auto/5/driver
+        [Route("api/{controller}/{id}/driver")]
+        public void Delete(int id, [FromBody]string value)
+        {
+            DriverAutoOperations.RemoveAutoDriver(id, int.Parse(value));
+        }
+
+        #endregion
     }
 }
