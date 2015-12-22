@@ -35,10 +35,9 @@ namespace TestWebApi.Controllers
         }
 
         // PUT api/driver/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] driver driver)
         {
-            var item = JsonConvert.DeserializeObject<driver>(value);
-            item.driver_id = id;
+            var item = driver;
 
             DriverOperations.Update(item);
         }
@@ -86,7 +85,7 @@ namespace TestWebApi.Controllers
             DriverAutoOperations.AddAutoToDriver(id, int.Parse(value));
         }
         // DELETE api/driver/5/auto
-        [HttpDelete]
+        [HttpPut]
         [Route("api/{controller}/{id}/Auto")]
         public void RemoveDriverAuto(int id, [FromBody]string value)
         {

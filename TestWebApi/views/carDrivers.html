@@ -1,0 +1,19 @@
+﻿<ul class="nav nav-pills">
+
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Добавить<span class="caret"></span></button>
+        <ul class="dropdown-menu" >
+            <li ng-repeat="drv1 in ctrl.drivers_avail">
+                <button type="button" class="btn-link" id="drv_{{drv1.driver_id}}" ng-click="ctrl.addDriver(drv1.driver_id)">{{drv1.last_name+' '+drv1.first_name}}</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group" ng-repeat="drv in ctrl.drivers">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">{{drv.last_name+' '+drv.first_name}}<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><button type="button" class="btn-link" id="remove_driver_{{drv.driver_id}}" ng-click="ctrl.removeDriver(drv.driver_id)">Удалить</button></li>
+        </ul>
+    </div>
+
+</ul>

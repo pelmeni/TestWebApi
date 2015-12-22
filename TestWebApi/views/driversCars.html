@@ -1,0 +1,19 @@
+﻿<ul class="nav nav-pills">
+
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Добавить<span class="caret"></span></button>
+        <ul class="dropdown-menu" >
+            <li ng-repeat="car1 in ctrl.cars_avail">
+                <button type="button" class="btn-link" id="car_{{car1.auto_id}}" ng-click="ctrl.addCar(car1.auto_id)">{{car1.no}}</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group" ng-repeat="car in ctrl.cars">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">{{car.no}}<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><button type="button" class="btn-link" id="remove_car_{{car.auto_id}}" ng-click="ctrl.removeCar(car.auto_id)">Удалить</button></li>
+        </ul>
+    </div>
+
+</ul>

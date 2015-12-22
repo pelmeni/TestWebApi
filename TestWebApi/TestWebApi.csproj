@@ -39,6 +39,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.14.1.24720\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Language.Intellisense.14.1.24720\lib\net45\Microsoft.VisualStudio.Language.Intellisense.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Text.Data.14.1.24720\lib\net45\Microsoft.VisualStudio.Text.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Text.Logic.14.1.24720\lib\net45\Microsoft.VisualStudio.Text.Logic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Text.UI.14.1.24720\lib\net45\Microsoft.VisualStudio.Text.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -73,7 +93,77 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\controller\CarController.js" />
+    <Content Include="Scripts\controller\CarDetailsController.js" />
+    <Content Include="Scripts\controller\DriverDetailsController.js" />
+    <Content Include="Scripts\controller\DriverController.js" />
+    <Content Include="Scripts\controller\HomeController.js" />
+    <Content Include="Scripts\controller\ProductDetailsController.js" />
+    <Content Include="Scripts\controller\SearchController.js" />
+    <Content Include="Scripts\directive\CarDriversDirective.js" />
+    <Content Include="Scripts\directive\DriverMenuDirective.js" />
+    <Content Include="Scripts\directive\FooterDirective.js" />
+    <Content Include="Scripts\directive\NavbarDirective.js" />
+    <Content Include="Scripts\es5-shim.js" />
+    <Content Include="Scripts\es5-shim.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\json3.js" />
+    <Content Include="Scripts\json3.min.js" />
+    <Content Include="Scripts\service\ApiService.js" />
+    <Content Include="Scripts\service\ProductService.js" />
+    <Content Include="Scripts\service\SettingsService.js" />
+    <Content Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <Content Include="Scripts\typings\angularjs\angular.d.ts" />
+    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
+    <Content Include="views\cars.html" />
+    <Content Include="views\car.html" />
+    <Content Include="views\carDrivers.html" />
+    <Content Include="views\driver.html" />
+    <Content Include="views\drivers.html" />
+    <Content Include="views\driversCars.html" />
+    <Content Include="views\FooterDirective.html" />
+    <Content Include="views\home.html" />
+    <Content Include="views\NavbarDirective.html" />
+    <Content Include="views\product.html" />
+    <Content Include="views\search.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +181,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\underscore.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,7 +219,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>63017</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51094/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

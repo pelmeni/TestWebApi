@@ -17,3 +17,13 @@ C:\dev\TestWebApi\TestWebApi\bin\EntityFramework.xml
 C:\dev\TestWebApi\TestWebApi\obj\Debug\TestWebApi.csprojResolveAssemblyReference.cache
 C:\dev\TestWebApi\TestWebApi\obj\Debug\TestWebApi.dll
 C:\dev\TestWebApi\TestWebApi\obj\Debug\TestWebApi.pdb
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.CoreUtility.dll
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Language.Intellisense.dll
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.Data.dll
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.Logic.dll
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.UI.dll
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.CoreUtility.xml
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Language.Intellisense.xml
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.Data.xml
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.Logic.xml
+C:\dev\TestWebApi\TestWebApi\bin\Microsoft.VisualStudio.Text.UI.xml

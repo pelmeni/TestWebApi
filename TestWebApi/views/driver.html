@@ -1,0 +1,57 @@
+﻿
+<h1>Автомобили</h1>
+<hr/>
+<testwebapi-drivermenu></testwebapi-drivermenu>
+<hr/>
+<h1>Водитель</h1>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Поставьте свою оценку водителю</h4>
+      </div>
+        <div class="modal-body">
+            <ul class="list-inline">
+                <li ng-repeat="v in [1,2,3,4,5,6,7,8,9,10]">
+                    <a class="glyphicon glyphicon-star" ng-mouseenter="ctrl.favOnOver(v)"
+                       ng-mouseleave="ctrl.favOnOut(v)"
+                        ng-click="ctrl.Feedback(v)"
+                            id="fav_{{v}}" style="font-size: 1.4em; color: gray; cursor: pointer; text-decoration: none" aria-hidden="true" data-toggle="modal" data-target="#myModal">{{}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div>
+
+    <form ng-submit="ctrl.submit()">
+        <div class="text-key">Средняя оценка</div>
+        <div class="text-value"><span data-toggle="tooltip" title="Здесь можно поставить оценку водителю!">
+    <span class="glyphicon glyphicon-star" style=" cursor: pointer; text-decoration: none" aria-hidden="true" data-toggle="modal" data-target="#myModal">{{ctrl.avgFeedback | number:2}}</span>
+</span>
+        </div><hr/>
+        <div class="text-key">Фамилия</div>
+        <div class="text-value"><input class="form-control" type="text" ng-model="ctrl.driver.last_name" name="userLastName"/>
+        </div><br/>
+        <div class="text-key">Имя</div>
+        <div class="text-value"><input class="form-control" type="text" ng-model="ctrl.driver.first_name" placeholder="Иван"/>
+        </div><br/>
+        <div class="text-key">Дата рождения</div>
+        <div class="text-value"><input class="form-control" type="text" ng-model="ctrl.driver.born_date" placeholder="19.10.1980"/>
+        </div><br/>
+        <div class="text-key">Номер паспорта</div>
+        <div class="text-value"><input class="form-control" type="text" ng-model="ctrl.driver.passport_no_full" placeholder="4505 780324"/>
+        </div><br/>
+        <input type="submit" value="Сохранить">
+    </form>
+    <hr/>
+</div>
+ 
+

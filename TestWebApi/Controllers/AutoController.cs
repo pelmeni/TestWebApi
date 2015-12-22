@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Text;
 using System.Web.Helpers;
 using System.Web.Http;
@@ -13,8 +14,14 @@ using TestWebApi.Data;
 
 namespace TestWebApi.Controllers
 {
+    
     public class AutoController : ApiController
     {
+        
+//        public ICollection<auto> Get()
+//        {
+//            return AutoOperations.GetList().ToList();
+//        }
         // GET api/auto
         public JsonResult<IEnumerable<auto>> Get()
         {
@@ -54,9 +61,9 @@ namespace TestWebApi.Controllers
             r.send("\"{'auto':'0','mark':'Mercedes','model':'Clk','no':'c666aa66ua','color':'красный'\}\"");
          */
         // PUT api/auto/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, auto item)
         {
-            var item = JsonConvert.DeserializeObject<auto>(value);
+            //var item = JsonConvert.DeserializeObject<auto>(value);
             item.auto_id = id;
 
             AutoOperations.Update(item);
@@ -91,10 +98,11 @@ namespace TestWebApi.Controllers
         [Route("api/{controller}/{id}/driver")]
         public void PostAddDriver(int id, [FromBody]string value)
         {
-            DriverAutoOperations.AddAutoToDriver(id, int.Parse(value));
+            DriverAutoOperations.AddAutoToDriver(int.Parse(value), id);
         }
 
         // DELETE api/auto/5/driver
+        [HttpPut]
         [Route("api/{controller}/{id}/driver")]
         public void Delete(int id, [FromBody]string value)
         {
